@@ -1,13 +1,13 @@
 def main():
+    from math import pow
     n = int(input())
 
-    cnt = n // 2
-    for c in range(1, (n // 2) + 1):
-        ab = n // c
-        ab = min(ab, c)
-        for b in range(1, ab + 1):
-            a = ab // b
-            cnt += min(a, b)
+    cnt = 0
+    for a in range(1, n + 1):
+        if pow(a, 3) > n:
+            break
+
+        
 
     print(cnt)
 
